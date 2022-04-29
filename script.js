@@ -24,8 +24,12 @@ console.log(arrowMyFunctions(24, 32));
 //     return money + 100;
 // };
 
+//ANSWER FOR PART 2
 const arrowAdd100 = (money = 1000) => money + 100;
 console.log(arrowAdd100());
+
+
+
 
 // //3 Create an arrow function that takes TWO arguments, a string and a single letter.  The function will count the number of times the specified letter occurs in the string. **Not case sensitive
 // Examples:
@@ -34,33 +38,26 @@ console.log(arrowAdd100());
 // countLetters('We love this city a lot, sometimes', 'e') returns 4
 //     * /
 
-// const countLetters = ("Hello my name is John", "i")
-// for (let i = 0; i < countLetters.length; i++) { //for loop like example used above
-//     if (countLetters[i] == 1) {     //if statement
-//         letterI.push(countLetters[i]);
-//     }
-// }
-// console.log(countLetters);
 
-// const countLetters2 = ("Hello my name is John", "h")
-// for (let i = 0; i < countLetters2.length; i++) { //for loop like example used above
-//     if (countLetters2[i] == 1) {     //if statement
-//         letterI.push(countLetters2[i]);
-//     }
-// }
-// console.log(countLetters2);
+//ANSWER FOR PART 3
+function char_count(str, letter) {
+    var letter_Count = 0;
+    for (var position = 0; position < str.length; position++) {
+        if (str.charAt(position) == letter) {
+            letter_Count += 1;
+        }
+    }
+    return letter_Count;
+}
 
-const letterI = string =>
-    string.split('').reduce((freqDict, char) => {
-        freqDict[char] = (freqDict[char] || 0) + 1;
-        return freqDict;
-    }, {})
+console.log(char_count('Hello my name is John', 'i'));
+console.log(char_count('Hello my name is John', 'h'));
+console.log(char_count('We love this city a lot, sometimes', 'e'));
 
-console.log(letterI("Hello my name is John", "i"));
 
-// const countLetterI = countLetterI(string(countLetters) == "i"  => 1);
 
-// console.log(countLetterI);
+
+
 
 //jodis example before challnge
 
